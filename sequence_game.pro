@@ -1,8 +1,11 @@
-#-------------------------------------------------
+# @file sequence_game.pro
 #
-# Project created by Pierre Ludwick
+# @brief Qt project file
 #
-#-------------------------------------------------
+# @author Pierre Ludwick
+# @date 15AUG2019
+# @copyright GNU Public License
+#
 
 QT       += core gui
 
