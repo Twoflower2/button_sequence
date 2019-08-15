@@ -53,7 +53,7 @@ SequenceWindow::SequenceWindow(QWidget *parent) :
   horizontallayout->addItem(verticalLayout1);
   setLayout(horizontallayout);
 
-  setWindowTitle(tr("3 Button chooce"));
+  setWindowTitle(tr("3 Button choice"));
   resize(800, 600);
 
   connect(m_button_a, &QPushButton::clicked, m_control,
