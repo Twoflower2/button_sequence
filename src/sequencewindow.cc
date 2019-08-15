@@ -15,23 +15,32 @@ SequenceWindow::SequenceWindow(QWidget *parent) :
     m_label_hint = new QLabel;
     m_control = new Control;
 
+    this->setMinimumSize(600,400);
+
+    QHBoxLayout *horizontallayout = new QHBoxLayout;
     QVBoxLayout *verticalLayout = new QVBoxLayout;
+    verticalLayout->setMargin(15);
     verticalLayout->addWidget(m_led_3_text);
+    verticalLayout->setSpacing(1);
     verticalLayout->addWidget(m_led_3);
     verticalLayout->addWidget(m_led_2_text);
     verticalLayout->addWidget(m_led_2);
     verticalLayout->addWidget(m_led_1_text);
     verticalLayout->addWidget(m_led_1);
-
-    QHBoxLayout *horizontallayout = new QHBoxLayout;
     horizontallayout->addItem(verticalLayout);
-    horizontallayout->addWidget(m_button_a);
-    horizontallayout->addWidget(m_button_b);
-    horizontallayout->addWidget(m_button_c);
-    horizontallayout->addWidget(m_label_hint);
-    QVBoxLayout *verticalLayout1 = new QVBoxLayout;
-    horizontallayout->addItem(verticalLayout1);
 
+    QVBoxLayout *verticalLayout1 = new QVBoxLayout;
+    QHBoxLayout *horizontallayout1 = new QHBoxLayout;
+    verticalLayout1->addStretch(50);
+    horizontallayout1->addWidget(m_button_a);
+    horizontallayout1->addSpacing(5);
+    horizontallayout1->addWidget(m_button_b);
+    horizontallayout1->addSpacing(5);
+    horizontallayout1->addWidget(m_button_c);
+    verticalLayout1->addItem(horizontallayout1);
+    verticalLayout1->addSpacing(10);
+    verticalLayout1->addWidget(m_label_hint);
+    horizontallayout->addItem(verticalLayout1);
     setLayout(horizontallayout);
 
     setWindowTitle(tr("3 Button chooce"));
@@ -50,9 +59,15 @@ SequenceWindow::SequenceWindow(QWidget *parent) :
 
 SequenceWindow::~SequenceWindow()
 {
-}
-
-void SequenceWindow::doExit()
-{
-
+    delete m_led_1;
+    delete m_led_2;
+    delete m_led_3;
+    delete m_led_1_text;
+    delete m_led_2_text;
+    delete m_led_3_text;
+    delete m_button_a;
+    delete m_button_b;
+    delete m_button_c;
+    delete m_label_hint;
+    delete m_control;
 }

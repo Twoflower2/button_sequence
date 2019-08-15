@@ -3,7 +3,10 @@
 
 #include <QObject>
 
-
+/**
+ * @class Control
+ * @brief The Control class is where the game logic is implimented
+ */
 class Control : public QObject
 {
     Q_OBJECT
@@ -16,13 +19,13 @@ public:
     void generateSequence();
     void validateButtonSequence(int value);
     bool isSequenceValue(const int buttonValue);
-    void getGameSequence(const int []);
+    void getGameSequence(const int gameArray[]);
 
  signals:
     void setLed1(int Color);
     void setLed2(int Color);
     void setLed3(int Color);
-    void setHint(QString);
+    void setHint(QString hintText);
 
  public slots:
     void validateButtonA();

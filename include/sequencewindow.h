@@ -2,18 +2,18 @@
 #define SEQUENCEWINDOW_H
 
 #include <QWidget>
-#include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QVBoxLayout>
-#include <QtWidgets/QWidget>
 #include <QLabel>
 #include <led.h>
 #include <control.h>
 
-
+/**
+ * @class SequenceWindow
+ * @brief The SequenceWindow class creates the appl. window
+ */
 class SequenceWindow : public QWidget
 {
     Q_OBJECT
@@ -22,7 +22,7 @@ class SequenceWindow : public QWidget
     explicit SequenceWindow(QWidget *parent = nullptr);
     ~SequenceWindow();
  private slots:
-    void doExit();
+
 
  private:
     Led *m_led_1;
