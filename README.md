@@ -1,4 +1,4 @@
-# Given a system with the following:
+## Given a system with the following:
 
  * LED 1 - which can be {red, green, orange}
  * LED 2 - which can be {red, green, orange}
@@ -7,7 +7,7 @@
  * Button B
  * Button C
 
-# Design & Implement software that fulfills these requirements:
+## Design & Implement software that fulfills these requirements:
 
   The system implements a game in which the user has to guess a sequence of three button presses.
   The sequence can contain any combination, e.g. BAC, CCB, AAA.
